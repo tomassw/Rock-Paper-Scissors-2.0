@@ -55,6 +55,21 @@ const btn3 = document.querySelector('#btn3');
 //const rezultat = document.querySelector('.result');
 //console.log(result);
 
+function reset() {
+    btn1.addEventListener('click', event1);
+    btn2.addEventListener('click', event2);
+    btn3.addEventListener('click', event3);
+
+    playerScore = 0;
+    computerScore = 0;
+
+    score.textContent = 'Best out of 5';
+    result.textContent = '';
+    result.style.cssText = 'border: 0px; padding: 0px;';
+
+    result.removeEventListener('click', reset);
+}
+
 //Afisarea rezultatului
 const result = document.querySelector('.result');
 const score = document.querySelector('.score');
@@ -82,7 +97,11 @@ function event1() {
         else {
             score.textContent = 'You lost!';
         }
-        result.textContent = '';
+
+        result.textContent = 'Try again';
+        result.style.cssText = 'border: 1px solid black; padding: 5px 20px;';
+
+        result.addEventListener('click', reset);
     }
 }
 
@@ -107,6 +126,12 @@ function event2() {
             score.textContent = 'You lost!';
         }
         result.textContent = '';
+
+        result.textContent = 'Try again';
+        result.style.cssText = 'border: 1px solid black; padding: 5px 20px;';
+
+        result.addEventListener('click', reset);
+    
     }
 }
 
@@ -130,6 +155,11 @@ function event3() {
             score.textContent = 'You lost!';
         }
         result.textContent = '';
+
+        result.textContent = 'Try again';
+        result.style.cssText = 'border: 1px solid black; padding: 5px 20px;';
+
+        result.addEventListener('click', reset);
     }
 }
 

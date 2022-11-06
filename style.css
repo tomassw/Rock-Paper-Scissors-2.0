@@ -33,6 +33,7 @@ body {
     font-size: 36px;
 }
 
+
 #btn1, #btn2, #btn3 {
     height: 200px;
     width: auto;
@@ -41,3 +42,12 @@ body {
 
 
 }
+
+#btn1:hover, #btn2:hover, #btn3:hover{
+    height: 200px;
+    width: auto;
+    border: 3px solid plum;
+    margin: -2px;
+    padding: -20px;
+}
+
